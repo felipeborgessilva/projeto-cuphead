@@ -206,6 +206,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &630992229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 630992230}
+  m_Layer: 0
+  m_Name: groundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &630992230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630992229}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.06, y: -0.53, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1026072594}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1026072592
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,6 +249,7 @@ GameObject:
   - component: {fileID: 1026072596}
   - component: {fileID: 1026072595}
   - component: {fileID: 1026072597}
+  - component: {fileID: 1026072598}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -287,7 +318,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.35, y: -0.97, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 630992230}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -304,8 +336,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.046191156, y: -0.059644043}
-  m_Size: {x: 0.59414315, y: 0.89422953}
+  m_Offset: {x: -0.046191156, y: -0.052322745}
+  m_Size: {x: 0.59414315, y: 0.87958694}
   m_Direction: 0
 --- !u!50 &1026072596
 Rigidbody2D:
@@ -340,9 +372,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35be529a29037cc42afe95ffe64ab697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 2.5
-  forcaPulo: 300
+  velocidade: 4
+  forcaPulo: 400
   olhandoParaEsquerda: 0
+  groundCheck: {fileID: 630992230}
+--- !u!95 &1026072598
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026072592}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b8dac54f7594e1d4e876b85c3f5e24e9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1466070837
 GameObject:
   m_ObjectHideFlags: 0
