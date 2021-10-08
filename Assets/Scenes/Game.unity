@@ -699,12 +699,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35be529a29037cc42afe95ffe64ab697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 4
+  velocidade: 3
   forcaPulo: 400
   olhandoParaEsquerda: 0
   groundCheck: {fileID: 630992230}
   dashSpeed: 10
   startDashCount: 0.2
+  dashCooldown: 0
 --- !u!95 &1026072598
 Animator:
   serializedVersion: 3
