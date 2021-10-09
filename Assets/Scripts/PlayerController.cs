@@ -18,7 +18,8 @@ public class PlayerController : MonoBehaviour
     private float dashCount;
     public float startDashCount;
     private int side;
-    public float dashCooldown;
+    private float dashCooldown;
+    private bool estaNoDash;
 
     // Start is called before the first frame update
     void Start()
@@ -59,15 +60,17 @@ public class PlayerController : MonoBehaviour
         meuAnimator.SetInteger("h", (int) horizontal);
         meuAnimator.SetBool("isGrounded", estaNoChao);
         
-        dashCooldown -= Time.deltaTime;
-
         // dash
+        dashCooldown -= Time.deltaTime;
         if (side == 0)
         {
             if (Input.GetButtonDown("Fire1") && dashCooldown <= 0)
             {
                 side = 1;
                 dashCount = startDashCount;
+                estaNoDash = true;
+            } else {
+                estaNoDash = false;
             }
         }
         else
@@ -85,9 +88,10 @@ public class PlayerController : MonoBehaviour
                 {
                     meuRigidBody.velocity = Vector2.right * dashSpeed;
                 }
-                dashCooldown = 0.5f;
+                dashCooldown = 0.8f;
             }
         }
+        meuAnimator.SetBool("isDashing", estaNoDash);
 
     }
 

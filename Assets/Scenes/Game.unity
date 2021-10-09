@@ -394,7 +394,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.28125
+  orthographic size: 3.28125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -699,13 +699,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35be529a29037cc42afe95ffe64ab697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 3
+  velocidade: 4
   forcaPulo: 400
   olhandoParaEsquerda: 0
   groundCheck: {fileID: 630992230}
-  dashSpeed: 10
+  dashSpeed: 15
   startDashCount: 0.2
-  dashCooldown: 0
 --- !u!95 &1026072598
 Animator:
   serializedVersion: 3
